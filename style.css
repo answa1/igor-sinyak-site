@@ -1,0 +1,1523 @@
+
+/* =========================================
+   IGOR SINYAK — LUXURY WEBSITE
+   ЕДИНЫЙ ДИЗАЙН ВСЕХ ПЯТИ СТРАНИЦ
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --background: #fff8fb;
+    --pink: #f1dce7;
+    --pink-light: #faedf3;
+    --pink-dark: #b66b91;
+    --pink-border: #ead2df;
+    --text: #392633;
+    --muted: #806475;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================
+   HEADER — ШАПКА
+========================================= */
+
+.header {
+    width: 100%;
+    padding: 28px 20px 25px;
+    text-align: center;
+    background: var(--pink);
+}
+
+.logo {
+    display: block;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 9px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.subtitle,
+.header-subtitle {
+    display: block;
+    margin-top: 9px;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NAVIGATION — МЕНЮ
+========================================= */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin: 25px auto 0;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 12px 21px;
+    border: 1px solid rgba(182, 107, 145, .38);
+    border-radius: 40px;
+    color: #704c61;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: white;
+    background: var(--pink-dark);
+    border-color: var(--pink-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(182, 107, 145, .2);
+}
+
+
+/* =========================================
+   GENERAL TYPOGRAPHY
+========================================= */
+
+h1, h2, h3, h4 {
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.9;
+}
+
+.eyebrow,
+.section-label {
+    color: var(--pink-dark);
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HOMEPAGE
+========================================= */
+
+.hero {
+    padding: 100px 20px 80px;
+    text-align: center;
+    background: linear-gradient(
+        120deg,
+        #f3dce8,
+        #fff8fb,
+        #edcbdc
+    );
+}
+
+.hero h1 {
+    margin: 30px 0 15px;
+    font-size: clamp(65px, 10vw, 110px);
+    animation: appear 1s ease;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.main-photo {
+    max-width: 900px;
+    margin: 65px auto 0;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 15px 45px rgba(90, 40, 65, .15);
+}
+
+.main-photo img {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   BIOGRAPHY
+========================================= */
+
+.bio-page {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 30px 100px;
+}
+
+.bio-main-title {
+    margin: 20px 0;
+    font-size: clamp(48px, 7vw, 85px);
+    text-align: center;
+}
+
+.bio-intro {
+    max-width: 850px;
+    margin: 50px auto 90px;
+    text-align: center;
+}
+
+.bio-lead {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.bio-cover {
+    margin: 45px auto;
+    text-align: center;
+}
+
+.bio-cover img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.bio-cover-caption,
+.image-caption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.bio-story {
+    max-width: 850px;
+    margin: 80px auto;
+}
+
+.bio-story-heading {
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+.bio-text {
+    margin: 18px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.bio-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+    margin: 90px 0;
+}
+
+.bio-feature-image {
+    overflow: hidden;
+    background: var(--pink-light);
+}
+
+.bio-feature-image img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.bio-feature-image:hover img {
+    transform: scale(1.05);
+}
+
+.bio-feature-text h2 {
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+.bio-feature-text p {
+    margin: 15px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.bio-gallery {
+    margin: 100px 0;
+}
+
+.bio-gallery-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.bio-gallery-heading h2 {
+    font-size: 48px;
+}
+
+.bio-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.bio-gallery-item {
+    overflow: hidden;
+    background: var(--pink-light);
+}
+
+.bio-gallery-item img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.bio-gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.bio-timeline {
+    max-width: 800px;
+    margin: 90px auto;
+}
+
+.timeline-entry,
+.timeline-item {
+    padding: 25px;
+    border-bottom: 1px solid var(--pink-border);
+}
+
+.bio-sources {
+    margin: 80px auto;
+}
+
+
+/* =========================================
+   BAGS — КОЛЛЕКЦИЯ СУМОК
+========================================= */
+
+.bags-page {
+    background: var(--background);
+}
+
+.bags-hero {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(
+        120deg,
+        #f3dce8,
+        #fff8fb,
+        #edcbdc
+    );
+}
+
+.bags-hero h1 {
+    margin: 20px 0;
+    font-size: clamp(55px, 8vw, 90px);
+}
+
+.bags-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.bags-about {
+    max-width: 850px;
+    margin: 90px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.bags-about h2 {
+    margin-bottom: 25px;
+    font-size: 48px;
+}
+
+.bags-about p {
+    margin: 15px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.bags-catalog {
+    padding: 90px 5%;
+    background: var(--pink-light);
+}
+
+.catalog-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.catalog-heading h2 {
+    margin: 15px 0;
+    font-size: 52px;
+}
+
+.catalog-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.bags-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bag-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #f0e2e8;
+    border-radius: 6px;
+    box-shadow: 0 12px 35px rgba(90, 40, 65, .08);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.bag-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 42px rgba(90, 40, 65, .14);
+}
+
+.bag-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--pink-light);
+}
+
+.bag-image img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: transform .65s ease;
+}
+
+.bag-card:hover .bag-image img {
+    transform: scale(1.05);
+}
+
+.bag-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 9px 13px;
+    background: rgba(255, 248, 251, .95);
+    color: #8f5675;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.bag-info {
+    padding: 25px;
+}
+
+.bag-number {
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.bag-info h3 {
+    margin: 12px 0;
+    font-size: 32px;
+}
+
+.bag-info p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.bag-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--pink-border);
+    color: var(--pink-dark);
+    font-size: 10px;
+}
+
+.birkin-fact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 25px;
+}
+
+.fact-image {
+    padding: 9px;
+    background: white;
+    box-shadow: 0 15px 40px rgba(90, 40, 65, .1);
+}
+
+.fact-image img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.birkin-fact h2 {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.birkin-fact p {
+    margin: 15px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.fact-price {
+    margin-top: 20px;
+    color: var(--pink-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+}
+
+.bags-theft {
+    padding: 90px 20px;
+    background: #f5e4ec;
+    text-align: center;
+}
+
+.bags-theft h2 {
+    margin: 15px 0;
+    font-size: 48px;
+}
+
+.bags-theft p {
+    max-width: 760px;
+    margin: 15px auto;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.bags-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: 40px;
+    background: var(--pink-dark);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.bags-link:hover {
+    background: #965273;
+    transform: translateY(-3px);
+}
+
+.bags-sources {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bags-sources h2 {
+    margin: 15px 0 25px;
+    font-size: 45px;
+}
+
+.bags-sources a {
+    display: block;
+    margin: 15px auto;
+    color: var(--pink-dark);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   ROBBERY PAGE
+========================================= */
+
+.robbery-page {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 30px 100px;
+}
+
+.robbery-hero {
+    padding: 70px 30px;
+    text-align: center;
+    background: linear-gradient(120deg, #f3dce8, #fff8fb, #edcbdc);
+}
+
+.robbery-hero h1 {
+    margin: 20px 0;
+    font-size: clamp(50px, 8vw, 85px);
+}
+
+.robbery-subtitle {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+}
+
+.crime-cover {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.crime-cover-image {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+.crime-cover-subtitle {
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.crime-cover-bottom {
+    margin-top: 20px;
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.crime-eyebrow {
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.crime-section {
+    max-width: 850px;
+    margin: 90px auto;
+}
+
+.crime-section h2 {
+    margin: 15px 0 25px;
+    font-size: 45px;
+}
+
+.crime-section p {
+    margin: 15px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.crime-intro {
+    max-width: 850px;
+    margin: 80px auto;
+}
+
+.crime-number {
+    color: #d2a1b7;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+}
+
+.crime-timeline-section,
+.crime-money-section,
+.crime-gallery-section {
+    margin: 90px 0;
+}
+
+.crime-timeline {
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+.crime-timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 25px;
+    padding: 25px;
+    border-bottom: 1px solid var(--pink-border);
+}
+
+.crime-timeline-date {
+    color: var(--pink-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+}
+
+.crime-timeline-content {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.crime-money-cards,
+.loss-grid,
+.crime-stolen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 35px 0;
+}
+
+.crime-money-card,
+.loss-card,
+.crime-stolen-card {
+    padding: 28px;
+    background: var(--pink-light);
+    border: 1px solid var(--pink-border);
+}
+
+.crime-money-label {
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.crime-money-card h3,
+.loss-card h3 {
+    margin: 15px 0;
+    font-size: 30px;
+}
+
+.crime-money-explanation,
+.crime-note,
+.crime-small-note,
+.small-note {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.crime-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.crime-photo {
+    overflow: hidden;
+}
+
+.crime-photo img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.crime-image-caption {
+    padding: 10px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.crime-interview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.crime-interview-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.crime-conclusion {
+    padding: 55px;
+    background: var(--pink-light);
+}
+
+.crime-sources,
+.robbery-sources {
+    margin: 80px auto;
+}
+
+.source-card,
+.source-link {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid var(--pink-border);
+    color: var(--pink-dark);
+    text-decoration: none;
+}
+
+.source-number {
+    margin-right: 15px;
+    color: #c58ca5;
+}
+
+
+/* =========================================
+   INTERVIEW PAGE
+========================================= */
+
+.interview-page {
+    max-width: 1160px;
+    margin: auto;
+    padding: 55px 35px 100px;
+    color: var(--text);
+}
+
+.interview-page h1,
+.interview-page h2,
+.interview-page h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+}
+
+.interview-page h2 {
+    margin: 15px 0 25px;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+}
+
+.interview-page p:not(.interview-eyebrow):not(.interview-small-note) {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.interview-eyebrow {
+    color: var(--pink-dark);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.interview-cover {
+    padding: 65px 0 40px;
+    text-align: center;
+}
+
+.interview-cover h1 {
+    margin: 20px 0;
+    color: var(--text);
+    font-size: clamp(65px, 11vw, 120px);
+    letter-spacing: -3px;
+}
+
+.interview-cover-subtitle {
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.interview-cover-photo {
+    max-width: 850px;
+    height: 480px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.interview-cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.interview-cover-photo:hover img {
+    transform: scale(1.05);
+}
+
+.interview-cover-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 17px 0;
+    border-top: 1px solid var(--pink-border);
+    border-bottom: 1px solid var(--pink-border);
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.interview-intro {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 110px auto;
+}
+
+.interview-intro-number {
+    color: #d4a4b8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+}
+
+.interview-topics {
+    margin: 110px 0;
+}
+
+.interview-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.interview-topic-card {
+    min-height: 220px;
+    padding: 32px 27px;
+    border: 1px solid #f0e3e9;
+    border-radius: 7px;
+    background: var(--pink-light);
+    transition: .35s ease;
+}
+
+.interview-topic-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(100, 52, 75, .09);
+}
+
+.interview-topic-card span {
+    display: block;
+    margin-bottom: 25px;
+    color: #d0a0b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+}
+
+.interview-topic-card h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.interview-topic-card p {
+    font-size: 12px !important;
+}
+
+.interview-section-description {
+    max-width: 700px;
+}
+
+.interview-fashion,
+.interview-new-life {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+    margin: 120px 0;
+}
+
+.interview-fashion-image,
+.interview-new-life-image {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.interview-fashion-image img,
+.interview-new-life-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.interview-fashion-image:hover img,
+.interview-new-life-image:hover img {
+    transform: scale(1.05);
+}
+
+.interview-robbery {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 45px;
+    align-items: center;
+    margin: 120px 0;
+    padding: 55px;
+    border-radius: 8px;
+    background: var(--pink-light);
+}
+
+.interview-robbery-image {
+    height: 430px;
+    overflow: hidden;
+}
+
+.interview-robbery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interview-more-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c995ab;
+    color: #a65e7e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.interview-vpsh {
+    max-width: 850px;
+    margin: 120px auto;
+}
+
+.interview-quote {
+    margin-top: 40px;
+    padding: 35px;
+    border-radius: 6px;
+    background: #392832;
+}
+
+.interview-quote span {
+    color: #e0b2c6;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.interview-quote p {
+    margin-top: 20px;
+    color: white !important;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px !important;
+}
+
+.interview-timestamps {
+    max-width: 900px;
+    margin: 120px auto;
+}
+
+.interview-time-list {
+    margin-top: 40px;
+}
+
+.interview-time-list a {
+    display: grid;
+    grid-template-columns: 90px 1fr 25px;
+    align-items: center;
+    gap: 20px;
+    padding: 23px 15px;
+    border-bottom: 1px solid var(--pink-border);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.interview-time-list a:hover {
+    padding-left: 25px;
+    background: var(--pink-light);
+}
+
+.interview-time-list a > span {
+    color: var(--pink-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+}
+
+.interview-time-list strong,
+.interview-time-list small {
+    display: block;
+}
+
+.interview-time-list strong {
+    color: #4d3b45;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.interview-time-list small {
+    margin-top: 7px;
+    color: #a08b95;
+    font-size: 11px;
+}
+
+.interview-time-list b {
+    color: var(--pink-dark);
+}
+
+.interview-small-note {
+    margin-top: 25px;
+    color: #a18b95;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.interview-video-section {
+    margin: 120px 0;
+}
+
+.interview-video-card {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    margin-top: 40px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #392832;
+}
+
+.interview-video-placeholder {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background:
+        linear-gradient(rgba(45, 28, 39, .35), rgba(45, 28, 39, .65)),
+        url("images/igor3.jpg") center / cover;
+    text-decoration: none;
+}
+
+.interview-play {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    border-radius: 50%;
+    background: white;
+    color: var(--pink-dark);
+    font-size: 22px;
+    transition: transform .3s ease;
+}
+
+.interview-video-placeholder:hover .interview-play {
+    transform: scale(1.12);
+}
+
+.interview-video-placeholder span {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.interview-video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 35px;
+}
+
+.interview-video-info h3 {
+    color: white;
+    font-size: 27px;
+}
+
+.interview-video-info p {
+    color: #d6bdc9 !important;
+    font-size: 12px !important;
+}
+
+.interview-watch-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 25px;
+    padding: 16px 22px;
+    background: #d5a0b8;
+    color: #392832;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.interview-watch-button:hover {
+    background: #f0c9da;
+}
+
+.interview-conclusion {
+    margin: 120px 0;
+    padding: 65px;
+    border-radius: 8px;
+    background: var(--pink-light);
+}
+
+.interview-sources {
+    max-width: 900px;
+    margin: 100px auto 0;
+}
+
+.interview-sources a {
+    display: grid;
+    grid-template-columns: 45px 1fr 25px;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 10px;
+    border-bottom: 1px solid var(--pink-border);
+    color: var(--text);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.interview-sources a:hover {
+    padding-left: 20px;
+    background: var(--pink-light);
+}
+
+.interview-sources a > span {
+    color: #c58ca5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+
+.interview-sources a strong,
+.interview-sources a small {
+    display: block;
+}
+
+.interview-sources a small {
+    margin-top: 7px;
+    color: #9b8790;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 35px 20px;
+    background: var(--pink);
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.footer span {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   PHOTO MODAL
+========================================= */
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(35, 20, 29, .92);
+}
+
+.photo-modal.show {
+    display: flex;
+}
+
+.photo-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE — ТЕЛЕФОНЫ И ПЛАНШЕТЫ
+========================================= */
+
+@media (max-width: 850px) {
+
+    .bags-grid,
+    .interview-topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bio-feature,
+    .interview-fashion,
+    .interview-new-life,
+    .birkin-fact,
+    .interview-robbery,
+    .crime-interview {
+        grid-template-columns: 1fr;
+    }
+
+    .crime-money-cards,
+    .loss-grid,
+    .crime-stolen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 22px 12px;
+    }
+
+    .logo {
+        font-size: 38px;
+        letter-spacing: 5px;
+    }
+
+    .subtitle,
+    .header-subtitle {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .navigation {
+        gap: 7px;
+        margin-top: 20px;
+    }
+
+    .navigation a {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 65px 15px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .main-photo {
+        margin: 35px 15px 0;
+    }
+
+    .bio-page,
+    .robbery-page {
+        padding: 40px 18px 70px;
+    }
+
+    .bio-gallery-grid,
+    .bags-grid,
+    .interview-topic-grid,
+    .crime-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-gallery-item img {
+        height: 330px;
+    }
+
+    .bags-hero {
+        padding: 65px 18px;
+    }
+
+    .bags-catalog {
+        padding: 65px 18px;
+    }
+
+    .bag-image img {
+        height: 360px;
+    }
+
+    .birkin-fact {
+        margin: 65px auto;
+    }
+
+    .fact-image img {
+        height: 350px;
+    }
+
+    .interview-page {
+        padding: 35px 18px 70px;
+    }
+
+    .interview-cover {
+        padding-top: 40px;
+    }
+
+    .interview-cover h1 {
+        font-size: 60px;
+        letter-spacing: -1px;
+    }
+
+    .interview-cover-photo {
+        height: 330px;
+    }
+
+    .interview-cover-meta {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 8px;
+    }
+
+    .interview-intro {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 70px auto;
+    }
+
+    .interview-intro-number {
+        font-size: 45px;
+    }
+
+    .interview-robbery {
+        padding: 30px 20px;
+    }
+
+    .interview-robbery-image {
+        height: 300px;
+    }
+
+    .interview-fashion-image,
+    .interview-new-life-image {
+        height: 350px;
+    }
+
+    .interview-conclusion {
+        padding: 35px 22px;
+    }
+
+    .interview-time-list a {
+        grid-template-columns: 65px 1fr 18px;
+        gap: 10px;
+        padding: 18px 5px;
+    }
+
+    .interview-time-list a > span {
+        font-size: 17px;
+    }
+
+    .interview-time-list strong {
+        font-size: 11px;
+    }
+
+    .interview-video-card {
+        grid-template-columns: 1fr;
+    }
+
+    .interview-video-placeholder {
+        min-height: 240px;
+    }
+
+    .interview-video-info {
+        padding: 30px 22px;
+    }
+
+    .crime-timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .crime-money-cards,
+    .loss-grid,
+    .crime-stolen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crime-conclusion {
+        padding: 30px 20px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
