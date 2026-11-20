@@ -48,7 +48,11 @@ const photos = document.querySelectorAll(
     ".fact-image img, " +
     ".crime-cover-image img, " +
     ".crime-photo img, " +
-    ".crime-interview-image img"
+    ".crime-interview-image img, " +
+    ".interview-cover-photo img, " +
+    ".interview-fashion-image img, " +
+    ".interview-robbery-image img, " +
+    ".interview-new-life-image img"
 );
 
 
